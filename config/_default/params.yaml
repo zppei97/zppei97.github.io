@@ -45,7 +45,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Zhipeng Pei · Powered by Hugo, theme by Hugo Blox'
     license:
       enable: true
       allow_derivatives: false

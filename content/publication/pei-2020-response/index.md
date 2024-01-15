@@ -12,5 +12,5 @@ publication_types:
 - article-journal
 publication: '*Science of the Total Environment*'
 tags:
-- concentration retrieval
+- Concentration retrieval
 ---

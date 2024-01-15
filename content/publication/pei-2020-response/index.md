@@ -1,0 +1,14 @@
+---
+title: Response of major air pollutants to COVID-19 lockdowns in China
+authors:
+- Zhipeng Pei
+- Ge Han
+- Xin Ma
+- Hang Su
+- Wei Gong
+date: '2020-01-01'
+publishDate: '2024-01-15T09:38:46.535834Z'
+publication_types:
+- article-journal
+publication: '*Science of the Total Environment*'
+---

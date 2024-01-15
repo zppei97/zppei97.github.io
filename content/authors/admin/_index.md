@@ -3,7 +3,7 @@
 title: 裴志鹏
 
 # Name pronunciation (optional)
-name_pronunciation: Zhipeng Pei
+name_pronunciation: Pei Zhipeng
 
 # Full name (for SEO)
 first_name: Zhipeng
@@ -11,13 +11,13 @@ last_name: Pei
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: 📖
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Ph.D. candidate at LIESMARS
+role: Ph.D. Candidate at LIESMARS
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -29,7 +29,7 @@ bio: My research interests include remote sensing, beyasian inversion problem an
 
 # Interests to show in About widget
 interests:
-  - Beyasian Model
+  - Beyasian Inversion Model
   - Hyperspectral Remote Sensing
   - CH4/CO2 Detection
 
@@ -70,15 +70,15 @@ skills:
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Cycling
         description: ''
         percent: 60
-        icon: person-hiking
+        icon: person-biking
         icon_pack: fas
-      - name: Cats
+      - name: Swimming
         description: ''
         percent: 100
-        icon: cat
+        icon: person-swimming
         icon_pack: fas
       - name: Photography
         description: ''
@@ -90,25 +90,27 @@ skills:
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
+#  search icons from https://fontawesome.com/icons?d=gallery&s=brands for fab pack (or https://fontawesome.com/icons?d=gallery&s=regular,solid for fas pack)
 social:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
+    link: https://twitter.com/PeiZhipeng
     label: Follow me on Twitter
     display:
       header: true
   - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
     icon_pack: fas
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+    link: https://scholar.google.com/citations?user=oeNl6iEAAAAJ&hl=en
+  - icon: researchgate
+    icon_pack: ai
+    link: https://www.researchgate.net/profile/Zhipeng-Pei
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
-  - icon: linkedin
-    icon_pack: fab
-    link: https://www.linkedin.com/
+    link: https://github.com/zppei97
+
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
@@ -120,5 +122,5 @@ social:
 highlight_name: true
 ---
 
-I am passionate about helping us better understand the Earth's GHG concentrations and emissions using satellite remote sensing, including IPDA lidar system (active RS) and imaging spectroscopy (passive RS). My goal is to realize independent evaluation of bottom-up inventories (especially for carbon dioxide and methane) via atmospheric transport modeling and space-based observations.
+I am passionate about helping us better understand the Earth's GHG (especially for carbon dioxide and methane) concentrations and emissions using satellite remote sensing, including IPDA lidar system (active RS) and imaging spectroscopy (passive RS). My goal is to realize independent evaluation of bottom-up inventories via atmospheric transport modeling and space-based observations.
 {style="text-align: justify;"}

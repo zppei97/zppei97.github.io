@@ -12,4 +12,6 @@ publishDate: '2024-01-15T15:21:05.147133Z'
 publication_types:
 - article-journal
 publication: '*IEEE Transactions on Geoscience and Remote Sensing*'
+tags:
+- Bayesian model
 ---

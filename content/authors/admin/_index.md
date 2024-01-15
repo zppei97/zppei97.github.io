@@ -29,7 +29,7 @@ bio: My research interests include remote sensing, beyasian inversion problem an
 
 # Interests to show in About widget
 interests:
-  - Beyasian Inversion Model
+  - Bayesian Model
   - Hyperspectral Remote Sensing
   - CH4/CO2 Detection
 

@@ -38,7 +38,7 @@ tags:
 featured: false
 
 image:
-  caption: 'with Kelly O'Neill'
+  caption: 'with Kelly Neill'
   focal_point: Right
 
 links:

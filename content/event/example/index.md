@@ -4,7 +4,7 @@ title: AGU Poster
 event: AGU 2023
 event_url: https://www.agu.org/Fall-Meeting
 
-location: Hugo Blox Builder HQ
+location: Moscone Center, South, Poster Hall A-C
 address:
   street: 747 Howard St
   city: San Francisco
@@ -38,7 +38,7 @@ tags:
 featured: false
 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+  caption: 'with Kelly O'Neill'
   focal_point: Right
 
 links:

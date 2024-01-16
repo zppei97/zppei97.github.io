@@ -218,6 +218,7 @@ sections:
       columns: '2'
       view: compact
   - block: markdown
+    id: gallery
     content:
       title: Gallery
       subtitle: ''

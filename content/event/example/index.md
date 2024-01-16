@@ -1,31 +1,38 @@
 ---
-title: Example Talk
+title: AGU Poster
 
-event: Hugo Blox Builder Conference
-event_url: https://example.org
+event: AGU 2023
+event_url: https://www.agu.org/Fall-Meeting
 
 location: Hugo Blox Builder HQ
 address:
-  street: 450 Serra Mall
-  city: Stanford
+  street: 747 Howard St
+  city: San Francisco
   region: CA
-  postcode: '94305'
+  postcode: '94103'
   country: United States
 
-summary: An example talk using Hugo Blox Builder's Markdown slides feature.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
+summary: Towards Better Estimating Facility-level Methane Emissions with Spaceborne Imaging Spectrometers
+abstract: Rapidly reducing methane emissions from the fossil fuel industry, particularly oil and gas (O&G) operations, is an effective means of mitigating global warming. There remains significant uncertainty in the magnitude and distribution given the unexpected and intermittent venting and leaks from the energy sector infrastructure. High pixel resolution (<100 meters) imaging spectroscopies enable attribution to specific facilities. Matched filter (MF) algorithm has been widely used for such instruments to detect and quantify methane emissions since it enables methane column concentration enhancement (in ppb) mapping. Unlike physics-based methods (e.g. DOAS), MF reduces the computational cost by simplifying the atmospheric radiative transfer model. However, the MF algorithm is unfaithful to the physics of gas detection and is only applicable to weak plumes due to the nonlinear model. In this presentation, we will discuss the Iterative Lognormal Matched Filter (ILMF) algorithm we are developing, to robustly and unbiasedly quantify methane enhancement. ILMF avoids the errors of Taylor's first-order expansion by logarithmically modeling the background spectra and obtains more accurate means and covariances of the background spectra through multiple iterations. We will focus on the performance of the ILMF method and MF in three sets of simulation experiments, including end-to-end simulations. We will further discuss the expected performance of both methods in typical methane hotspot regions. Finally, we will discuss the uncertainties of ILMF and subsequent improvements that can still be made.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2023-12-12T08:30:00Z'
+date_end: '2023-12-12T12:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+# publishDate: '2017-01-01T00:00:00Z'
 
-authors: []
-tags: []
+authors:
+- Zhipeng Pei
+- Ge Han
+- Cuihong Chen
+- Huiqin Mao
+- Xin Ma
+- Wei Gong
+tags:
+- Methane detection
 
 # Is this a featured talk? (true/false)
 featured: false

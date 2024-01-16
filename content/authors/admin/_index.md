@@ -25,23 +25,23 @@ organizations:
     url: https://www.whu.edu.cn/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include remote sensing, beyasian inversion problem and land-atmosphere interactions.
+bio: My research interests include remote sensing, bayesian inversion problem and land-atmosphere interactions.
 
 # Interests to show in About widget
 interests:
-  - Bayesian Model
+  - Bayesian Inversion Model
   - Hyperspectral Remote Sensing
   - CH4/CO2 Detection
 
 # Education to show in About widget
 education:
   courses:
-    - course: Ph.D. in Remote Sensing, advisor Prof. John Lin
+    - course: Ph.D. in Remote Sensing
       institution: Wuhan University
-      year: 2025.06(expected)
+      year: June 2025 (expected)
     - course: B.E. in Computer Science
       institution: Wuhan University
-      year: 2019
+      year: June 2019
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons

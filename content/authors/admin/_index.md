@@ -50,18 +50,18 @@ skills:
     items:
       - name: Python
         description: ''
-        percent: 80
+        percent: 60
         icon: python
         icon_pack: fab
-      - name: Data Science
+      - name: Matlab
         description: ''
         percent: 100
-        icon: chart-line
+        icon: code
         icon_pack: fas
-      - name: SQL
+      - name: GEE
         description: ''
         percent: 40
-        icon: database
+        icon: earth-americas
         icon_pack: fas
   - name: Hobbies
     color: '#eeac02'
@@ -69,12 +69,12 @@ skills:
     items:
       - name: Cycling
         description: ''
-        percent: 60
+        percent: 90
         icon: person-biking
         icon_pack: fas
       - name: Swimming
         description: ''
-        percent: 100
+        percent: 50
         icon: person-swimming
         icon_pack: fas
       - name: Photography

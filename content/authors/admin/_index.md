@@ -36,13 +36,10 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in Remote Sensing
+    - course: Ph.D. in Remote Sensing, advisor Prof. John Lin
       institution: Wuhan University
       year: 2025.06(expected)
-    - course: MEng in Remote Sensing
-      institution: Wuhan University
-      year: 2022
-    - course: BEng in Computer Science
+    - course: B.E. in Computer Science
       institution: Wuhan University
       year: 2019
 
@@ -122,5 +119,5 @@ social:
 highlight_name: true
 ---
 
-I am passionate about helping us better understand the Earth's GHG (especially for carbon dioxide and methane) concentrations and emissions using satellite remote sensing, including IPDA lidar system (active RS) and imaging spectroscopy (passive RS). My goal is to realize independent evaluation of bottom-up inventories via atmospheric transport modeling and space-based observations.
+I’m a second year Ph.D. student at WHU under the supervisions of Profs. [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). I am passionate about helping us better understand the Earth's GHG (especially for carbon dioxide and methane) concentrations and emissions using satellite remote sensing, including IPDA lidar system (active RS) and imaging spectroscopy (passive RS). My goal is to realize independent evaluation of bottom-up inventories via atmospheric transport modeling and space-based observations.
 {style="text-align: justify;"}

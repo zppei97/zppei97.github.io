@@ -12,7 +12,6 @@ publication_types:
 - article-journal
 publication: '*Science of the Total Environment*'
 tags:
-- Concentration retrieval
 - Environmental pollution
 # Display this page in the Featured widget?
 featured: true

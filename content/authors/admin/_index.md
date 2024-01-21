@@ -118,7 +118,7 @@ social:
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Hi, there. I am Zhipeng Pei!
+👋🏼 Hi, there! I am Zhipeng Pei.
 
 I grew up in Jiaozuo, Henan, China, before I embarking on my journey at Wuhan University, where I completed my bachelor's degree in computer science (June 2019). Currently I’m a second year Ph.D. student at Wuhan University under the supervisions of Profs. [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). 
 

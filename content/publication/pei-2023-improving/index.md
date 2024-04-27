@@ -21,9 +21,9 @@ tags:
 featured: true
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: Link
+  url: https://doi.org/10.1016/j.rse.2023.113652
 
 url_pdf: ''
 

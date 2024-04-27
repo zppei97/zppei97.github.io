@@ -14,4 +14,9 @@ publication_types:
 publication: '*IEEE Transactions on Geoscience and Remote Sensing*'
 tags:
 - Bayesian model
+links:
+- name: Link
+  url: https://ieeexplore.ieee.org/document/9777733
+
+url_pdf: ''
 ---

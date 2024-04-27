@@ -17,4 +17,12 @@ publishDate: '2024-01-15T15:21:05.165780Z'
 publication_types:
 - article-journal
 publication: '*Geophysical Research Letters*'
+tags:
+- Concentration retrieval
+- IPDA Lidar
+links:
+- name: Link
+  url: https://doi.org/10.1029/2020GL091160
+
+url_pdf: ''
 ---

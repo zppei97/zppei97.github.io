@@ -17,9 +17,9 @@ tags:
 featured: true
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Custom Link
-#   url: http://example.org
+links:
+- name: Link
+  url: https://doi.org/10.1016/j.scitotenv.2020.140879
 
 url_pdf: ''
 

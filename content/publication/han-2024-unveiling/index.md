@@ -38,7 +38,8 @@ links:
   url: https://doi.org/10.5061/dryad.ncjsxksx2
 
 url_pdf: ''
-
+url_code: 'https://github.com/peisipand/GF5_MF_CH4'
+url_dataset: 'https://doi.org/10.5061/dryad.ncjsxksx2'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:

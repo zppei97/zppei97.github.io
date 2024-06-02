@@ -27,6 +27,16 @@ links:
 - name: Link
   url: https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL109065
 
+# code links (uncomment lines below)
+links:
+- name: Code
+  url: https://github.com/peisipand/GF5_MF_CH4
+
+# data links (uncomment lines below)
+links:
+- name: Data
+  url: https://doi.org/10.5061/dryad.ncjsxksx2
+
 url_pdf: ''
 
 # Featured image

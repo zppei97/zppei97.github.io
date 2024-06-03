@@ -30,7 +30,7 @@ url_pdf: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)' # 图片上加注释
+  caption: 'Image credit: [**RSE**](https://linkinghub.elsevier.com/retrieve/pii/S0034425723002031)' # 图片上加注释
   focal_point: ''
   preview_only: false
 

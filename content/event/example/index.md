@@ -1,5 +1,5 @@
 ---
-title: AGU Poster
+title: Towards Better Estimating Facility-level Methane Emissions with Spaceborne Imaging Spectrometers
 
 event: AGU 2023
 event_url: https://www.agu.org/Fall-Meeting
@@ -12,7 +12,7 @@ address:
   postcode: '94103'
   country: United States
 
-summary: Towards Better Estimating Facility-level Methane Emissions with Spaceborne Imaging Spectrometers
+summary: We will discuss the Iterative Lognormal Matched Filter (ILMF) algorithm.
 abstract: Rapidly reducing methane emissions from the fossil fuel industry, particularly oil and gas (O&G) operations, is an effective means of mitigating global warming. There remains significant uncertainty in the magnitude and distribution given the unexpected and intermittent venting and leaks from the energy sector infrastructure. High pixel resolution (<100 meters) imaging spectroscopies enable attribution to specific facilities. Matched filter (MF) algorithm has been widely used for such instruments to detect and quantify methane emissions since it enables methane column concentration enhancement (in ppb) mapping. Unlike physics-based methods (e.g. DOAS), MF reduces the computational cost by simplifying the atmospheric radiative transfer model. However, the MF algorithm is unfaithful to the physics of gas detection and is only applicable to weak plumes due to the nonlinear model. In this presentation, we will discuss the Iterative Lognormal Matched Filter (ILMF) algorithm we are developing, to robustly and unbiasedly quantify methane enhancement. ILMF avoids the errors of Taylor's first-order expansion by logarithmically modeling the background spectra and obtains more accurate means and covariances of the background spectra through multiple iterations. We will focus on the performance of the ILMF method and MF in three sets of simulation experiments, including end-to-end simulations. We will further discuss the expected performance of both methods in typical methane hotspot regions. Finally, we will discuss the uncertainties of ILMF and subsequent improvements that can still be made.
 
 # Talk start and end times.

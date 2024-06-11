@@ -106,7 +106,7 @@ social:
     link: https://www.researchgate.net/profile/Zhipeng-Pei
   - icon: github
     icon_pack: fab
-    link: https://github.com/zppei97
+    link: https://github.com/peisipand
 
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,

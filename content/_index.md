@@ -252,9 +252,13 @@ sections:
       #  - 'Monday 10:00 to 13:00'
       #  - 'Wednesday 09:00 to 10:00'
       # Choose a map provider in `params.yaml` to show a map from these coordinates
+      # wuhan
+      #coordinates:
+      #  latitude: '30.5275'
+      #  longitude: '114.3566'  
       coordinates:
-        latitude: '30.5275'
-        longitude: '114.3566'  
+        latitude: '39.4794293'
+        longitude: '-0.3425647' 
       contact_links:
         - icon: twitter
           icon_pack: fab

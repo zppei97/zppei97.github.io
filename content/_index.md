@@ -240,13 +240,21 @@ sections:
       #   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
       # # Contact (add or remove contact options as necessary)
       email: zhipeng.pei@whu.edu.cn
+      # wuhan
+      #address:
+      #  street: Luoyu Road No.129
+      #  city: Wuhan
+      #  region: Hubei
+      #  postcode: '430079'
+      #  country: China
+      #  country_code: CN
       address:
-        street: Luoyu Road No.129
-        city: Wuhan
-        region: Hubei
-        postcode: '430079'
-        country: China
-        country_code: CN
+        street: Camí de Vera, s/n, Algirós
+        city: València
+        region: Valencia
+        postcode: '46022'
+        country: Spain
+        country_code: ES
       # directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
       # office_hours:
       #  - 'Monday 10:00 to 13:00'

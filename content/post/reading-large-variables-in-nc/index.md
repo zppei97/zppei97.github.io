@@ -29,8 +29,8 @@ summary: Reading large variables from nc file in chunks in Matlab
 使用 `ncread` 的 `start` 和 `count` 参数分块读取数据，这样可以避免一次性将整个变量加载到内存中。`start` 指定读取的起始位置，`count` 指定读取的大小。例如：
 
 ```matlab
-filename = 'uvtr_hour1-002.nc';  % 替换为你的文件名
-varname = 'tr17_1';  % 替换为你的变量名
+filename = 'uvtr_hour1-002.nc'; 
+varname = 'tr17_1';  % 维度为360*360*159*121，我们需要计算得到一个 360*360*121的变量，即在第三维度进行积分。
 
 % 获取变量的信息
 info = ncinfo(filename, varname);

@@ -23,7 +23,7 @@ featured: true
 # Custom links (uncomment lines below)
 links:
 - name: Link
-  url: https://doi.org/10.1016/j.rse.2023.113652
+  url: https://www.sciencedirect.com/science/article/pii/S0034425723002031
 
 url_pdf: ''
 

@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Ph.D. Candidate at LIESMARS
+role: Ph.D. Candidate at [LIESMARS](https://liesmars.whu.edu.cn/index.htm)
 
 # Organizations/Affiliations to show in About widget
 organizations:

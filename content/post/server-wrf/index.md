@@ -1,7 +1,7 @@
 ---
-title: 读取nc文件中的变量时内存不足
-date: '2024-09-10'
-summary: Reading large variables from nc file in chunks in Matlab
+title: WRF的安装及使用
+date: '2024-10-5'
+summary: WRF installation and use on the server
 ---
 
 

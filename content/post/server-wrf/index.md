@@ -1,6 +1,6 @@
 ---
 title: WRF的安装及使用
-date: '2024-10-5'
+date: '2024-10-05'
 summary: WRF installation and use on the server
 ---
 
@@ -281,6 +281,7 @@ mpirun -np 6 ./wrf.exe
 How to choose the better number of processors?
     
 > For your smallest-sized domain: ((e_we)/25) * ((e_sn)/25) = **most** amount of processors you should use
-For your largest-sized domain: ((e_we)/100) * ((e_sn)/100) = **least** amount of processors you should use
+> 
+> For your largest-sized domain: ((e_we)/100) * ((e_sn)/100) = **least** amount of processors you should use
 >
 

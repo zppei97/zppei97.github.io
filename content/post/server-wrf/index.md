@@ -1,7 +1,7 @@
 ---
-title: WRF的安装及使用
+title: WRF installation and use on the server
 date: '2024-10-05'
-summary: WRF installation and use on the server
+summary: WRF的安装及使用
 ---
 
 

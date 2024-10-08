@@ -22,6 +22,7 @@ if you use this bash for the first time, it’s better to run the script line by
 #!/bin/bash
 ## WRF installation with parallel process.
 # Download and install required library for WRF.
+# The WRF folder will be under HOME
 # Zhipeng Pei <zhipeng.pei@whu.edu.cn>
 # Tested in Ubuntu 22.04.5 LTS
 # Ctrl+D to comment and Ctrl+shift+D to uncomment line in KATE
@@ -153,6 +154,7 @@ echo "export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
 # ############################ WRF 4.2.2 #################################
 # ## WRF v4.2.2
 # ########################################################################
+cd $HOME/WRF
 git clone https://github.com/wrf-model/WRF
 cd WRF
 git checkout release-v4.2.2

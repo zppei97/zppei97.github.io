@@ -275,20 +275,57 @@ Some of the problems I've had
     git checkout release-v4.2.2
     ```
         
-# For running LES
-    
-[UCAR website](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap5.html#runtimeio) describes how to control the variables and output frequency.
-    
+# 2. For running LES
+## 2.1 How to control the variables and output frequency.
+
+According to the [UCAR website](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap5.html#runtimeio)
+
+- The first step is to create a text file (e.g., my_file_d0X.txt), for each domain, and define the name of that file in the &time_control  section of namelist.input, as indicated below.
+```
+ &time_control
+ iofields_filename               = "myoutfields_d01.txt", "myoutfields_d02.txt","myoutfields_d03.txt"  ! Name of file that tells WRF what to output
+ ignore_iofields_warning         = .true.
+```
+- Contents of the text file associate a stream ID (0 is the default history and input) with a variable, and whether the field is added or removed. Following are a few examples.
+```
+-:h:0:RAINC,RAINNC
+```
+removes the fields RAINC and RAINNC from the standard history file.
+
+```
++:h:7:RAINC,RAINNC
+```
+adds the fields RAINC and RAINNC to an output stream #7, which would create a separate file from the wrfout* files.
+
+
+
+Available options are
+
+- \+ or -, add or remove a variable
+- 0-24, which stream (integer)
+- i or h, input or history
+- field name in the Registry – this is the first string in quotes.
+
+If you are interested in outputting variables into a new stream (i.e., not the default history stream 0), then the following namelist variables will also be necessary (example for stream 7):
+
+```
+auxhist7_outname = “yourstreamname_d<domain>_<date>”
+auxhist7_interval = 360, 360,
+frames_per_auxhist7 = 1, 1,
+io_form_auxhist7 = 2
+```
+
+## 2.2 How to run model with multi processor
 mpirun -np 6 ./wrf.exe
     
-How to choose the better number of processors?
+## 2.3 How to choose the better number of processors?
     
 > For your smallest-sized domain: ((e_we)/25) * ((e_sn)/25) = **most** amount of processors you should use
 > 
 > For your largest-sized domain: ((e_we)/100) * ((e_sn)/100) = **least** amount of processors you should use
 >
 
-How to choose the better time_step in WRF's namelist.input?
+## 2.4 How to choose the better time_step in WRF's namelist.input?
 
 According to the [README.namelist](https://github.com/wrf-model/WRFDA/blob/master/run/README.namelist)
 

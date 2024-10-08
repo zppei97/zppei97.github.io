@@ -150,6 +150,7 @@ make install
 ## export PATH and LD_LIBRARY_PATH
 echo "export PATH=$DIR/bin:$PATH" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=$DIR/lib:$LD_LIBRARY_PATH" >> ~/.bashrc
+source ~/.bashrc
 
 # ############################ WRF 4.2.2 #################################
 # ## WRF v4.2.2
@@ -286,4 +287,10 @@ How to choose the better number of processors?
 > 
 > For your largest-sized domain: ((e_we)/100) * ((e_sn)/100) = **least** amount of processors you should use
 >
+
+How to choose the better time_step in WRF's namelist.input?
+
+According to the [README.namelist](https://github.com/wrf-model/WRFDA/blob/master/run/README.namelist)
+
+> time step for integration in integer seconds recommend 6*dx (in km) for typical real-data cases
 

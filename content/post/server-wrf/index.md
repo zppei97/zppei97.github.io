@@ -299,14 +299,14 @@ adds the fields RAINC and RAINNC to an output stream #7, which would create a se
 
 
 
-Available options are
+- Available options are
 
-- \+ or -, add or remove a variable
-- 0-24, which stream (integer)
-- i or h, input or history
-- field name in the Registry – this is the first string in quotes.
+  - \+ or -, add or remove a variable
+  - 0-24, which stream (integer)
+  - i or h, input or history
+  - field name in the Registry – this is the first string in quotes.
 
-If you are interested in outputting variables into a new stream (i.e., not the default history stream 0), then the following namelist variables will also be necessary (example for stream 7):
+- If you are interested in outputting variables into a new stream (i.e., not the default history stream 0), then the following namelist variables will also be necessary (example for stream 7):
 
 ```
 auxhist7_outname = “yourstreamname_d<domain>_<date>”

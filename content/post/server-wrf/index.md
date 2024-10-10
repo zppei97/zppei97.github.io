@@ -275,8 +275,17 @@ Some of the problems I've had
     git checkout release-v4.2.2
     ```
         
-# 2. For running LES
-## 2.1 How to control the variables and output frequency.
+# 2. For running LES in ideal case
+## 2.1 About namelist.input
+
+[Here](https://github.com/zppei97/zppei97.github.io/tree/main/content/post/server-wrf/namelist.input) is an example of my namelist.input
+
+### 2.1.1 How to set the variable in namelist.input?
+[Here](https://www2.mmm.ucar.edu/wrf/users/namelist_best_prac_wrf.html) is the description of namelist.input from ucar.
+
+### 2.1.2 How to set the nested domain?
+![png](namelist_domain.png)
+### 2.1.3 How to control the variables and output frequency.
 
 According to the [UCAR website](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap5.html#runtimeio)
 
@@ -314,20 +323,37 @@ auxhist7_interval = 360, 360,
 frames_per_auxhist7 = 1, 1,
 io_form_auxhist7 = 2
 ```
+### 2.1.4 How to choose the better time_step in WRF's namelist.input?
 
-## 2.2 How to run model with multi processor
-mpirun -np 6 ./wrf.exe
-    
-## 2.3 How to choose the better number of processors?
+According to the [README.namelist](https://github.com/wrf-model/WRFDA/blob/master/run/README.namelist)
+
+> time step for integration in integer seconds recommend 6*dx (in km) for typical real-data cases
+
+## 2.2 About input.sounding
+[Here](https://github.com/zppei97/zppei97.github.io/tree/main/content/post/server-wrf/input_sounding) is an example of my input_sounding
+![png](description_input_sounding.png)
+
+## 2.3 How to run model with multi processor
+
+
+`mpirun -np 6 ./wrf.exe` use 6 logical processors. 
+
+The allocation of these 6 processes can occur on one or multiple physical CPUs, depending on how the scheduler distributes them.
+
+To understand the difference between **CPUs**, **Cores** and **logical processors**: For example, each of your physical **CPUs** has 14 **cores**. If hyper-threading is enabled, each core can run 2 threads, resulting in 28 **logical processors** per physical CPU. Many thanks to ChatGPT :).
+
+
+If you dont know the number of your CPU/cores, use
+```
+lscpu
+```
+to show the information.
+## 2.4 How to choose the better number of processors?
     
 > For your smallest-sized domain: ((e_we)/25) * ((e_sn)/25) = **most** amount of processors you should use
 > 
 > For your largest-sized domain: ((e_we)/100) * ((e_sn)/100) = **least** amount of processors you should use
 >
 
-## 2.4 How to choose the better time_step in WRF's namelist.input?
 
-According to the [README.namelist](https://github.com/wrf-model/WRFDA/blob/master/run/README.namelist)
-
-> time step for integration in integer seconds recommend 6*dx (in km) for typical real-data cases
 

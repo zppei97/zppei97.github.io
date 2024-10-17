@@ -323,9 +323,12 @@ auxhist7_interval = 360, 360,
 frames_per_auxhist7 = 1, 1,
 io_form_auxhist7 = 2
 ```
+
+Here is an example from [Brian Blaylock](https://home.chpc.utah.edu/~u0553130/Brian_Blaylock/tracer.html)
+
 ### 2.1.4 How to choose the better time_step in WRF's namelist.input?
 
-According to the [README.namelist](https://github.com/wrf-model/WRFDA/blob/master/run/README.namelist)
+According to the [README.namelist](https://github.com/wrf-model/WRF/blob/master/run/README.namelist)
 
 > time step for integration in integer seconds recommend 6*dx (in km) for typical real-data cases
 
@@ -355,5 +358,13 @@ to show the information.
 > For your largest-sized domain: ((e_we)/100) * ((e_sn)/100) = **least** amount of processors you should use
 >
 
-
+## 2.5 Strange filenames due to colon : in Mac finder
+WRF outputs NetCDF filenames (like `auxhist24_d02_0001-01-01_00:00:00`) that contain timestamps (often including a colon `:`), which on Mac finder systems is an illegal character or causes the filename to be garbled.
+you can use the `mv`command to rename a file that contains a colon`:`
+```
+for file in wrfout*; do
+    new_file=$(echo $file | sed 's/:/_/g')
+    mv "$file" "$new_file"
+done
+```
 

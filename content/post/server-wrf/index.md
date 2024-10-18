@@ -2,6 +2,9 @@
 title: WRF installation and use on the server
 date: '2024-10-05'
 summary: WRF的安装及使用
+show_related: true
+show_breadcrumb: true
+backlinks: true
 ---
 
 

@@ -5,6 +5,10 @@ summary: WRF的安装及使用
 show_related: true
 show_breadcrumb: true
 backlinks: true
+commentable: true
+header:
+  navbar:
+    enable: ture
 ---
 
 

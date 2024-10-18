@@ -4,15 +4,11 @@ date: '2024-10-05'
 summary: WRF的安装及使用
 show_related: true
 show_breadcrumb: true
-backlinks: true
-commentable: true
-header:
-  navbar:
-    enable: ture
+toc: true
 ---
 
 
-# 1. For WRF LES compilation
+# 1. For WRF LES compilation {{< toc >}}
 ## 1.1 Steps
 Environment:
 - OS: Ubuntu 22.04.5 LTS without sudo permission
@@ -282,7 +278,7 @@ Some of the problems I've had
     git checkout release-v4.2.2
     ```
         
-# 2. For running LES in ideal case
+# 2. For running LES in ideal case {{< toc >}}
 ## 2.1 About namelist.input
 
 [Here](https://github.com/zppei97/zppei97.github.io/tree/main/content/post/server-wrf/namelist.input) is an example of my namelist.input

@@ -4,7 +4,7 @@ date: '2024-09-10'
 summary: Reading large variables from nc file in chunks in Matlab
 tags:
   - Matlab
-toc: true
+toc: false
 ---
 
 ## 一、遇到的问题

@@ -2,8 +2,7 @@
 title: 读取nc文件中的变量时内存不足
 date: '2024-09-10'
 summary: Reading large variables from nc file in chunks in Matlab
-show_breadcrumb: true
-backlinks: false
+backlinks: true
 ---
 
 ## 一、遇到的问题

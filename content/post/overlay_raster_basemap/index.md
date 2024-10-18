@@ -5,6 +5,7 @@ summary: 使用python在底图上叠加栅格
 ---
 
 
+[Basemap API](https://matplotlib.org/basemap/stable/index.html)
 ```
 # https://matplotlib.org/basemap/stable/index.html
 import rioxarray as rxr
@@ -56,5 +57,4 @@ plt.show()
 
 ```
 
-![png](featured.png)
 

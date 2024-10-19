@@ -5,7 +5,6 @@ summary: WRF的安装及使用
 show_breadcrumb: true
 ---
 
-{{< toc mobile_only=true is_open=true >}}
 
 # 1. For WRF LES compilation
 ## 1.1 Steps

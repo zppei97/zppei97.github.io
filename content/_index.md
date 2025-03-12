@@ -103,7 +103,7 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
-  - block: contact
+  - block: collection
     id: contact
     content:
       title: Contact

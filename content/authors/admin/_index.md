@@ -50,16 +50,21 @@ education:
     date_start: 2024-08-01
     date_end: 2025-04-20
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-
-  # - area: Ph.D. in Remote Sensing
-  #   institution: Wuhan University
-  #   date_start: 2019-09-01
-  #   date_end: 2025-06-31 (expected)
-  # - area: B.E. in Computer Science
-  #   institution: Wuhan University
-  #   date_start: 2015-09-01
-  #   date_end: 2019-06-31
+      Supervised by [Luis Guanter](http://luiguapa.webs.upv.es/)
+  - area: Ph.D. in Remote Sensing
+    institution: Wuhan University
+    date_start: 2019-09-01
+    date_end: 2025-06-31 (expected)
+    summary: |
+      Supervised by [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). PhD thesis topic is on "Remote Sensing Detection and Quantification Methods for Point-Source Carbon Emissions"
+  - area: B.E. in Computer Science
+    institution: Wuhan University
+    date_start: 2015-09-01
+    date_end: 2019-06-31
+    Courses included:
+      - Linear algebra
+      - Remote sensing image analysis
+      - Data structures and algorithms
 
 # education:
 #   - area: PhD Artificial Intelligence

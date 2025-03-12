@@ -12,6 +12,7 @@ design:
 sections:
   - block: resume-experience
     content:
+      title: Education
       username: admin
     design:
       # Hugo date format

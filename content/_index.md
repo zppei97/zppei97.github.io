@@ -10,27 +10,36 @@ design:
 
 # block: resume-biography-3
 sections:
-  - block: resume-biography-3
+  - block: resume-biography
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
+      # The user's folder name in content/authors/
       username: admin
-      text: ""
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/CV.pdf
     design:
-      css_class: dark
-      # background:
-      #   color: black
-      #   image:
-      #     # Add your image background to `assets/media/`.
-      #     filename: stacked-peaks.svg
-      #     filters:
-      #       brightness: 1.0
-      #     size: cover
-      #     position: center
-      #     parallax: false
+      spacing:
+        padding: [0, 0, 0, 0]
+      biography:
+        style: 'text-align: justify; font-size: 0.8em;'
+  # - block: resume-biography-3
+  #   content:
+  #     # Choose a user profile to display (a folder name within `content/authors/`)
+  #     username: admin
+  #     text: ""
+  #     # Show a call-to-action button under your biography? (optional)
+  #     button:
+  #       text: Download CV
+  #       url: uploads/CV.pdf
+  #   design:
+  #     css_class: dark
+  #     background:
+  #       color: black
+  #       image:
+  #         # Add your image background to `assets/media/`.
+  #         filename: stacked-peaks.svg
+  #         filters:
+  #           brightness: 1.0
+  #         size: cover
+  #         position: center
+  #         parallax: false
   - block: markdown
     content:
       title: '📚 My Research'

@@ -8,8 +8,15 @@ authors:
 - Tianqi Shi
 - Wei Gong
 date: '2022-01-01'
-publishDate: '2025-03-12T18:10:17.620384Z'
+publishDate: '2024-01-15T15:21:05.147133Z'
 publication_types:
 - article-journal
 publication: '*IEEE Transactions on Geoscience and Remote Sensing*'
+tags:
+- Bayesian model
+links:
+- name: Link
+  url: https://ieeexplore.ieee.org/document/9777733
+
+url_pdf: ''
 ---

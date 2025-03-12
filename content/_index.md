@@ -40,14 +40,15 @@ sections:
   #         size: cover
   #         position: center
   #         parallax: false
-  - block: markdown
-    content:
-      title: '📚 My Research'
-      subtitle: ''
-      text: |-
-        I am passionate about helping us better understand the Earth's GHG (especially for carbon dioxide and methane) concentrations and emissions using satellite remote sensing, including IPDA lidar system (active RS) and imaging spectroscopy (passive RS). My goal is to realize independent evaluation of bottom-up inventories via atmospheric transport modeling and space-based observations.
-    design:
-      columns: '2'
+
+  # - block: markdown
+  #   content:
+  #     title: '📚 My Research'
+  #     subtitle: ''
+  #     text: |-
+  #       I am passionate about helping us better understand the Earth's GHG (especially for carbon dioxide and methane) concentrations and emissions using satellite remote sensing, including IPDA lidar system (active RS) and imaging spectroscopy (passive RS). My goal is to realize independent evaluation of bottom-up inventories via atmospheric transport modeling and space-based observations.
+  #   design:
+  #     columns: '2'
   - block: collection
     id: papers
     content:

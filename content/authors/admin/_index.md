@@ -61,7 +61,8 @@ education:
     institution: Wuhan University
     date_start: 2015-09-01
     date_end: 2019-06-31
-    Courses included:
+    summary: |
+      Courses included:
       - Linear algebra
       - Remote sensing image analysis
       - Data structures and algorithms

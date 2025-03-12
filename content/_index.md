@@ -18,7 +18,7 @@ sections:
       spacing:
         padding: [0, 0, 0, 0]
       biography:
-        style: 'text-align: justify; font-size: 0.8em;'
+        style: 'text-align: justify; font-size: 1em;'
   # - block: resume-biography-3
   #   content:
   #     # Choose a user profile to display (a folder name within `content/authors/`)
@@ -60,17 +60,18 @@ sections:
     design:
       view: card
       #article-grid
-      columns: 2
+      # columns: 1
+
   - block: collection
     content:
       title: Recent Publications
-      text: ""
       filters:
         folders:
           - publication
         exclude_featured: false
     design:
       view: citation
+
   - block: collection
     id: talks
     content:
@@ -80,13 +81,13 @@ sections:
           - event
     design:
       view: article-grid
-      columns: 2
+      # columns: 1
+
+
   - block: collection
     id: posts
     content:
       title: Posts
-      subtitle: ''
-      text: ''
       # Page type to display. E.g. post, talk, publication...
       page_type: post
       # Choose how many pages you would like to display (0 = all pages)

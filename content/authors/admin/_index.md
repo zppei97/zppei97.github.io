@@ -49,14 +49,17 @@ education:
     institution: Universitat Politècnica de València
     date_start: 2024-08-01
     date_end: 2025-04-20
-  - area: Ph.D. in Remote Sensing
-    institution: Wuhan University
-    date_start: 2019-09-01
-    date_end: 2025-06-31 (expected)
-  - area: B.E. in Computer Science
-    institution: Wuhan University
-    date_start: 2015-09-01
-    date_end: 2019-06-31
+    summary: |
+      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+
+  # - area: Ph.D. in Remote Sensing
+  #   institution: Wuhan University
+  #   date_start: 2019-09-01
+  #   date_end: 2025-06-31 (expected)
+  # - area: B.E. in Computer Science
+  #   institution: Wuhan University
+  #   date_start: 2015-09-01
+  #   date_end: 2019-06-31
 
 # education:
 #   - area: PhD Artificial Intelligence

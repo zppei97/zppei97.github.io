@@ -8,28 +8,35 @@ design:
   # Default section spacing
   spacing: "6rem"
 
+# block: resume-biography-3
 sections:
-  - block: resume-biography-3
+  - block: about.biography
+    id: about
     content:
+      title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-      text: ""
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/CV.pdf
-    design:
-      css_class: dark
-      background:
-        color: black
-        image:
-          # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
-          filters:
-            brightness: 1.0
-          size: cover
-          position: center
-          parallax: false
+  # - block: resume-biography-3
+  #   content:
+  #     # Choose a user profile to display (a folder name within `content/authors/`)
+  #     username: admin
+  #     text: ""
+  #     # Show a call-to-action button under your biography? (optional)
+  #     button:
+  #       text: Download CV
+  #       url: uploads/CV.pdf
+  #   design:
+  #     css_class: dark
+  #     background:
+  #       color: black
+  #       image:
+  #         # Add your image background to `assets/media/`.
+  #         filename: stacked-peaks.svg
+  #         filters:
+  #           brightness: 1.0
+  #         size: cover
+  #         position: center
+  #         parallax: false
   # - block: markdown
   #   content:
   #     title: '📚 My Research'
@@ -103,20 +110,8 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
-  - block: tag_cloud
-    content:
-      title: My title
-      subtitle: My subtitle
-      text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
-      # Choose a taxonomy from the `taxonomies` list in `config.yaml` to display (e.g. tags, categories, authors)
-      taxonomy: tags
-      # Choose how many tags you would like to display (0 = all tags)
-      count: 20
-    design:
-      # Minimum and maximum font sizes (1.0 = 100%).
-      font_size_min: 0.7
-      font_size_max: 2.0
-      
+
+
   # - block: cta-card
   #   demo: true # Only display this section in the Hugo Blox Builder demo site
   #   content:

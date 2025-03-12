@@ -34,8 +34,8 @@ header:
     fixed_to_top: true
     show_search: true
     show_theme_chooser: true
-    logo:
-      text: "Zhipeng Pei"
+    # logo:
+    #   text: "Zhipeng Pei"
 
 # Site footer
 footer:

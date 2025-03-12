@@ -18,7 +18,7 @@ sections:
       spacing:
         padding: [0, 0, 0, 0]
       biography:
-        style: 'text-align: justify; font-size: 1em;'
+        style: 'text-align: justify; font-size: 0.8em;'
   # - block: resume-biography-3
   #   content:
   #     # Choose a user profile to display (a folder name within `content/authors/`)
@@ -81,7 +81,7 @@ sections:
           - event
     design:
       view: article-grid
-      # columns: 1
+      columns: 1
 
 
   - block: collection

@@ -1,13 +1,13 @@
 ---
-title: WRF installation and use on the server
+title: WRF-LES installation and use on the server
 date: '2024-10-05'
-summary: WRF的安装及使用
+summary: WRF-LES的安装及使用
 show_breadcrumb: true
 ---
 
 
-# 1. For WRF LES compilation
-## 1.1 Steps
+## 1. Installation
+### 1.1 Script
 Environment:
 - OS: Ubuntu 22.04.5 LTS without sudo permission
 - Compilers Version: gcc 11.4.0 (system native)
@@ -199,94 +199,92 @@ export NETCDF_classic=1
 $ source ~/.bash_profile
 ```
     
-## 1.2 Summary
+### 1.2 Problems
 Some of the problems I've had
 
-- Problem 1:
+**Problem 1:**
 
-    ```
-    more undefined references to `__module_optional_input_MOD_st_input' follow
-    collect2: error: ld returned 1 exit status
-    ```
+```
+more undefined references to `__module_optional_input_MOD_st_input' follow
+collect2: error: ld returned 1 exit status
+```
 
-- Solution 1:
+[As WRF forum decribed](https://forum.mmm.ucar.edu/threads/wrf-4-4-build-failure-with-gcc-ubuntu-11-2-0-19ubuntu1.11536/), Using `openmpi` not `MPICH` for Ubuntu 22.04. If you have `sudo` permission, just 
 
-    [As WRF forum decribed](https://forum.mmm.ucar.edu/threads/wrf-4-4-build-failure-with-gcc-ubuntu-11-2-0-19ubuntu1.11536/), Using `openmpi` not `MPICH` for Ubuntu 22.04. If you have `sudo` permission, just 
+```
+sudo apt install libopenmpi-dev libhdf5-openmpi-dev
+```
 
-    ```
-    sudo apt install libopenmpi-dev libhdf5-openmpi-dev
-    ```
+If you don't have sudo permission, install openmpi manually as described in my bash file above.
 
-    If you don't have sudo permission, install openmpi manually as described in my bash file above.
+Check `mpirun`, and it should be
 
-    Check `mpirun`, and it should be
+```jsx
+$ mpirun --version
+mpirun (Open MPI) 4.1.6
 
-    ```jsx
-    $ mpirun --version
-    mpirun (Open MPI) 4.1.6
+Report bugs to http://www.open-mpi.org/community/help/
+```
 
-    Report bugs to http://www.open-mpi.org/community/help/
-    ```
+**Problem 2:**
 
-- Problem 2:
+```jsx
+************************** W A R N I N G ************************************
+NETCDF4 IO features are requested, but this installation of NetCDF           
+    /home/zppei/WRF/Library/netcdf
+DOES NOT support these IO features.                                          
 
-    ```jsx
-    ************************** W A R N I N G ************************************
-    NETCDF4 IO features are requested, but this installation of NetCDF           
-        /home/zppei/WRF/Library/netcdf
-    DOES NOT support these IO features.                                          
+Please make sure NETCDF version is 4.1.3 or later and was built with         
+--enable-netcdf4                                                             
 
-    Please make sure NETCDF version is 4.1.3 or later and was built with         
-    --enable-netcdf4                                                             
+OR set NETCDF_classic variable                                               
+    bash/ksh : export NETCDF_classic=1
+        echo  csh : setenv NETCDF_classic 1
 
-    OR set NETCDF_classic variable                                               
-        bash/ksh : export NETCDF_classic=1
-            echo  csh : setenv NETCDF_classic 1
+Then re-run this configure script                                            
 
-    Then re-run this configure script                                            
+!!! configure.wrf has been REMOVED !!!
 
-    !!! configure.wrf has been REMOVED !!!
+*****************************************************************************
 
-    *****************************************************************************
+```
 
-    ```
 
-- Solution 2:
-    Like the [official wrf guide](https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php), I didn't install hdf5, although you may read in other blogs that hdf installation is important for netcdf installation. I asked ChatGPT and get the answer about hdf5 and netcdf.
+Like the [official wrf guide](https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php), I didn't install hdf5, although you may read in other blogs that hdf installation is important for netcdf installation. I asked ChatGPT and get the answer about hdf5 and netcdf.
 
-    In summary, the HDF5 (Hierarchical Data Format 5) library is necessary for NetCDF-4. But we can disable NetCDF-4 support without HDF5 `./configure --disable-netcdf-4`. That's the reason why I get Problem 2. Take easy, just the following command will solve the problem.
+In summary, the HDF5 (Hierarchical Data Format 5) library is necessary for NetCDF-4. But we can disable NetCDF-4 support without HDF5 `./configure --disable-netcdf-4`. That's the reason why I get Problem 2. Take easy, just the following command will solve the problem.
 
-    `export NETCDF_classic=1`
+`export NETCDF_classic=1`
 
-- Problem 3:
+**Problem 3:**
 
-    ```jsx
-    $ cat -n compile_bash_step_by_step.log | grep Error
-    165	Error: Dummy argument ?datasetname? with INTENT(IN) in variable definition context (actual argument to INTENT = OUT/INOUT) at (1)
-    173	Error: Rank mismatch between actual argument at (1) and actual argument at (2) (rank-1 and scalar)
-    178	Error: Type mismatch in argument ?field? at (1); passed INTEGER(4) to REAL(8)
-    ```
+```jsx
+$ cat -n compile_bash_step_by_step.log | grep Error
+165	Error: Dummy argument ?datasetname? with INTENT(IN) in variable definition context (actual argument to INTENT = OUT/INOUT) at (1)
+173	Error: Rank mismatch between actual argument at (1) and actual argument at (2) (rank-1 and scalar)
+178	Error: Type mismatch in argument ?field? at (1); passed INTEGER(4) to REAL(8)
+```
 
-- Solution 3:
-    [davegill](https://github.com/wrf-model/WRF/issues/1250) suggested use new release of WRF.
 
-    ```
-    git clone https://github.com/wrf-model/WRF
-    cd WRF
-    git checkout release-v4.2.2
-    ```
+[davegill](https://github.com/wrf-model/WRF/issues/1250) suggested use new release of WRF.
+
+```
+git clone https://github.com/wrf-model/WRF
+cd WRF
+git checkout release-v4.2.2
+```
         
-# 2. For running LES in ideal case
-## 2.1 About namelist.input
+## 2. Running ideal LES
+### 2.1 namelist.input
 
 [Here](https://github.com/zppei97/zppei97.github.io/tree/main/content/post/server-wrf/namelist.input) is an example of my namelist.input
 
-### 2.1.1 How to set the variable in namelist.input?
+#### 2.1.1 Description
 [Here](https://www2.mmm.ucar.edu/wrf/users/namelist_best_prac_wrf.html) is the description of namelist.input from ucar.
 
-### 2.1.2 How to set the nested domain?
+#### 2.1.2 Nested domain
 ![png](namelist_domain.png)
-### 2.1.3 How to control the variables and output frequency.
+#### 2.1.3 Output variables and frequency
 
 According to the [UCAR website](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap5.html#runtimeio)
 
@@ -327,17 +325,17 @@ io_form_auxhist7 = 2
 
 Here is an example from [Brian Blaylock](https://home.chpc.utah.edu/~u0553130/Brian_Blaylock/tracer.html)
 
-### 2.1.4 How to choose the better time_step in WRF's namelist.input?
+#### 2.1.4 Time_step
 
 According to the [README.namelist](https://github.com/wrf-model/WRF/blob/master/run/README.namelist)
 
 > time step for integration in integer seconds recommend 6*dx (in km) for typical real-data cases
 
-## 2.2 About input.sounding
+### 2.2 input.sounding
 [Here](https://github.com/zppei97/zppei97.github.io/tree/main/content/post/server-wrf/input_sounding) is an example of my input_sounding
 ![png](description_input_sounding.png)
 
-## 2.3 How to run model with multi processor
+### 2.3 How to run model with multi processor
 
 
 `mpirun -np 6 ./wrf.exe` use 6 logical processors. 
@@ -352,15 +350,18 @@ If you dont know the number of your CPU/cores, use
 lscpu
 ```
 to show the information.
-## 2.4 How to choose the better number of processors?
+### 2.4 Parallel
     
 > For your smallest-sized domain: ((e_we)/25) * ((e_sn)/25) = **most** amount of processors you should use
 > 
 > For your largest-sized domain: ((e_we)/100) * ((e_sn)/100) = **least** amount of processors you should use
 >
 
-## 2.5 Strange filenames due to colon : in Mac finder
+### 2.3 Problems
+**Problem 1: Strange filenames due to colon : in Mac finder**
+
 WRF outputs NetCDF filenames (like `auxhist24_d02_0001-01-01_00:00:00`) that contain timestamps (often including a colon `:`), which on Mac finder systems is an illegal character or causes the filename to be garbled.
+
 you can use the `mv`command to rename a file that contains a colon`:`
 ```
 for file in wrfout*; do

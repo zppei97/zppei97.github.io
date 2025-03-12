@@ -54,7 +54,7 @@ education:
   - area: Ph.D. in Remote Sensing
     institution: Wuhan University
     date_start: 2019-09-01
-    date_end: 2025-06-31 (expected)
+    date_end: 2025-06-31
     summary: |
       Supervised by [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). PhD thesis topic is on "Remote Sensing Detection and Quantification Methods for Point-Source Carbon Emissions"
   - area: B.E. in Computer Science

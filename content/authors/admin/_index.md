@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: 裴志鹏
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Pei Zhipeng
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Zhipeng
+last_name: Pei
 
 # Status emoji
 status:
@@ -20,36 +20,29 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Chief Scientist
+role: Ph.D. Candidate at [LIESMARS](https://liesmars.whu.edu.cn/index.htm)
 
-# Organizations/Affiliations to display in Biography blox
+# Organizations/Affiliations to show in About widget
 organizations:
-  - name: OpenAI
-    url: https://openai.com/
+  - name: Wuhan University
+    url: https://www.whu.edu.cn/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:your-email@example.com'
+    url: 'mailto:zhipeng.pei@whu.edu.cn'
     label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/GetResearchDev
-  - icon: brands/instagram
-    url: https://www.instagram.com/
   - icon: brands/github
-    url: https://github.com/gcushen
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/
+    url: https://github.com/peisipand
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/
-  - icon: academicons/orcid
-    url: https://orcid.org/
+    url: https://scholar.google.com/citations?user=oeNl6iEAAAAJ&hl=en
+
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Bayesian Inversion Model
+  - Hyperspectral Remote Sensing
+  - CH4/CO2 Detection
 
 education:
   - area: PhD Artificial Intelligence
@@ -83,71 +76,76 @@ education:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
-    company_url: ''
-    company_logo: ''
-    date_start: 2021-01-01
-    date_end: ''
-    summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
-    company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+# work:
+#   - position: Director of Cloud Infrastructure
+#     company_name: GenCoin
+#     company_url: ''
+#     company_logo: ''
+#     date_start: 2021-01-01
+#     date_end: ''
+#     summary: |2-
+#       Responsibilities include:
+#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+#   - position: Backend Software Engineer
+#     company_name: X
+#     company_url: ''
+#     company_logo: ''
+#     date_start: 2016-01-01
+#     date_end: 2020-12-31
+#     summary: |
+#       Responsibilities include:
+#       - Migrated infrastructure to a new data center
+#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+#       - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Technical
     items:
       - name: Python
         description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Data Science
+        percent: 60
+        icon: python
+        icon_pack: fab
+      - name: Matlab
         description: ''
         percent: 100
-        icon: chart-bar
-      - name: SQL
+        icon: code
+        icon_pack: fas
+      - name: GEE
         description: ''
         percent: 40
-        icon: circle-stack
+        icon: earth-americas
+        icon_pack: fas
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Cycling
         description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
+        percent: 90
+        icon: person-biking
+        icon_pack: fas
+      - name: Swimming
         description: ''
-        percent: 100
-        icon: cat
+        percent: 50
+        icon: person-swimming
+        icon_pack: fas
       - name: Photography
         description: ''
         percent: 80
-        icon: camera
+        icon: camera-retro
+        icon_pack: fas
 
 languages:
   - name: English
-    percent: 100
+    percent: 80
   - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+    percent: 100
+
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -183,4 +181,10 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+👋🏼 Hi, there! I am Zhipeng Pei.
+
+I grew up in Jiaozuo, Henan, China, before embarking on my journey at Wuhan University, where I completed my bachelor's degree in computer science (June 2019). I’m a third year Ph.D. student at Wuhan University under the supervisions of Profs. [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). Currently I am participating in a joint-Ph.D. program under the supervision of [Luis Guanter](http://luiguapa.webs.upv.es/) at Universitat Politècnica de València.
+{style="text-align: justify;"}
+
+I am passionate about helping us better understand the Earth's GHG (especially for carbon dioxide and methane) concentrations and emissions using satellite remote sensing, including IPDA lidar system (active RS) and imaging spectroscopy (passive RS). My goal is to realize independent evaluation of bottom-up inventories via atmospheric transport modeling and space-based observations.
+{style="text-align: justify;"}

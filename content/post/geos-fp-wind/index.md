@@ -4,8 +4,28 @@ date: '2025-03-12'
 summary: Automatically downloads and reads 10-meter wind speeds from GEOS-FP data.
 ---
 
+[GEOS-FP数据门户](https://portal.nccs.nasa.gov/datashare/gmao/geos-fp/das/)提供了包括`tavg1_2d_slv_Nx` 在内的多种产品。
 
+## 命名规则
+- **tavg1**：表示 **1 小时平均**（Time-averaged over 1 hour）。
+- **2d**：表示 **二维变量**（2D variables），即地表或接近地表的大气变量。
+- **slv**：表示 **地表变量**（Surface and near-surface variables），包括温度、风速、降水、湿度等。
+- **Nx**：表示 **非插值网格（Non-interpolated grid）**，即数据在模型网格上直接输出，没有额外的插值处理。
 
+## 主要变量
+`tavg1_2d_slv_Nx` 产品包含多个气象变量，以下是一些常见变量：
+
+| 变量名称 | 描述 |
+|----------|------|
+| `T2M`    | 2米气温（Surface Air Temperature, K） |
+| `U10M`   | 10米东西向风速（10-meter U-component Wind, m/s） |
+| `V10M`   | 10米南北向风速（10-meter V-component Wind, m/s） |
+| `PS`     | 地表气压（Surface Pressure, Pa） |
+| `RH2M`   | 2米相对湿度（Relative Humidity, %） |
+| `PRECTOT` | 总降水率（Precipitation Rate, mm/s） |
+| `QV2M`   | 2米比湿（Specific Humidity, kg/kg） |
+
+## 代码
 
 ```
 #!/usr/bin/env python

@@ -41,6 +41,7 @@ import requests
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
+
 def download_nc_file_with_progress(url, local_path):
     """
     下载文件并实时显示进度。
@@ -74,33 +75,30 @@ def download_nc_file_with_progress(url, local_path):
 
     print("\n下载完成。\n")
 
-def get_nearest_wind_speed_tavg(lon, lat, year, month, day, hour, minute):
+def get_nearest_wind_speed_tavg(lon, lat, dtime):
     """
     获取全球U10M、V10M风场，以及指定位置的最近10m平均风速（tavg1_2d_slv_Nx产品）
 
     :param lon: 经度 (float)
     :param lat: 纬度 (float)
-    :param year: 年 (int)
-    :param month: 月 (int)
-    :param day: 日 (int)
-    :param hour: 小时 (int)
-    :param minute: 分钟 (int)
+    :param dtime: datetime (datetime)
     :return:
         global_u10m: 全球U10M风速场 (2D array)
         global_v10m: 全球V10M风速场 (2D array)
-        nearest_point_wind_speed: 指定点的10米平均风速 (float)
-        nearest_time: 最近的时间点 (datetime)
         lons: 经度数组
         lats: 纬度数组
+        u10: 最近点的u10风速
+        v10: 最近点的v10风速
     """
+    data_folder = "geos_fp_data"
+    if not os.path.exists(data_folder):
+        os.makedirs(data_folder)
 
     # 1. 计算最近的30分钟时刻
-    target_time = datetime(year, month, day, hour, minute)
-
-    if minute <= 30:
-        nearest_time = target_time.replace(minute=30)
+    if dtime.minute <= 30:
+        nearest_time = dtime.replace(minute=30)
     else:
-        nearest_time = target_time.replace(minute=30) + timedelta(hours=1)
+        nearest_time = dtime.replace(minute=30) + timedelta(hours=1)
 
     nearest_year = nearest_time.year
     nearest_month = nearest_time.month
@@ -118,7 +116,7 @@ def get_nearest_wind_speed_tavg(lon, lat, year, month, day, hour, minute):
         f"https://portal.nccs.nasa.gov/datashare/gmao/geos-fp/das/"
         f"Y{nearest_year}/M{nearest_month:02d}/D{nearest_day:02d}/{file_name}"
     )
-    local_path = os.path.join("geos_fp_data", file_name)
+    local_path = os.path.join(data_folder, file_name)
 
     # 3. 下载文件（已有则跳过）
     download_nc_file_with_progress(file_url, local_path)
@@ -137,11 +135,18 @@ def get_nearest_wind_speed_tavg(lon, lat, year, month, day, hour, minute):
     lat_idx = np.abs(lats - lat).argmin()
 
     # 7. 读取指定位置的风速，并转换为标量
-    nearest_point_wind_speed = ds['U10M'].isel(lon=lon_idx, lat=lat_idx).squeeze().values
+    u10 = ds['U10M'].isel(lon=lon_idx, lat=lat_idx).squeeze().values
+    v10 = ds['V10M'].isel(lon=lon_idx, lat=lat_idx).squeeze().values
+    U10 = np.sqrt(u10**2 + v10**2)
+    nearest_lon = ds['lon'].isel(lon=lon_idx).squeeze().values
+    nearest_lat = ds['lat'].isel(lat=lat_idx).squeeze().values
 
+    print(f'Nearest time is : {nearest_time}')
+    print(f'Nearest Lon is : {nearest_lon}')
+    print(f'Nearest Lat is : {nearest_lat}')
+    print(f'Nearest Point U10 is : {U10:.2f}')
     ds.close()
-
-    return global_u10m, global_v10m, lons, lats, nearest_point_wind_speed, nearest_time
+    return global_u10m, global_v10m, lons, lats, u10, v10
 
 # 示例调用
 if __name__ == "__main__":
@@ -152,22 +157,22 @@ if __name__ == "__main__":
     day = 1
     hour = 0
     minute = 56
-
-    (global_u10m, global_v10m, lons, lats, nearest_point_wind_speed,
-     nearest_time) = get_nearest_wind_speed_tavg(lon, lat, year, month, day, hour, minute)
-
-    print(f"最近的30分钟时间点: {nearest_time}")
-    print(f"最近的10米平均风速: {nearest_point_wind_speed:.2f} m/s")
+    dtime = datetime.datetime(year, \
+                              month, \
+                              day, \
+                              hour, minute, \
+                              tzinfo=datetime.timezone.utc)
+    global_u10m, global_v10m, lons, lats, u10, v10 = get_nearest_wind_speed_tavg(lon, lat, dtime)
+    U10 = np.sqrt(u10**2 + v10**2)
+    print(f"最近的10米平均风速: {U10:.2f} m/s")
 
     # 可视化U10M全球风场
-    plt.figure(figsize=(12, 6))
-    plt.pcolormesh(lons, lats, global_u10m, shading='auto', cmap='jet',vmin=-2, vmax=2)
-    plt.colorbar(label='U10 (m/s)')
-    plt.xlim(110, 114)
-    plt.ylim(25, 30)
+    plt.figure(figsize=(8, 4))
+    plt.pcolormesh(lons, lats, global_u10m, shading='auto', cmap='jet',vmin=-5, vmax=5)
+    plt.colorbar(label='U10 (m/s)',pad=0.02)
     plt.xlabel('Longitude')
     plt.ylabel('Latitude')
-    plt.title(f'Global 10-meter eastward wind at {nearest_time}')
+    plt.title(f'Global 10-meter eastward wind at {dtime}')
     plt.grid(True)
     plt.show()
 ```

@@ -35,11 +35,16 @@ profiles:
     label: E-mail Me
   - icon: brands/github
     url: https://github.com/peisipand
+    label: Github
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=oeNl6iEAAAAJ&hl=en
+    label: Google Scholar
+  - icon: custom/rg
+    url: https://www.researchgate.net/profile/Zhipeng-Pei?ev=hdr_xprf
+    label: Research Gate
   - icon: academicons/cv
     url: uploads/CV.pdf
-    label: Download my resume
+    label: CV
 
 
 interests:

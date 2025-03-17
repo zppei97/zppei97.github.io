@@ -1,10 +1,8 @@
 ---
-title: 👩🏼‍🏫 Teach academic courses
-summary: Embed videos, podcasts, code, LaTeX math, and even test students!
-date: 2023-10-24
+title: 线性模型回归中的置信区间
+date: '2024-10-15'
+summary: Confidence Interval in linear model regression 
 math: true
-authors:
-  - admin
 ---
 
 在了解置信区间之前，先来区分两个不同的概念。

@@ -2,6 +2,7 @@
 title: 线性模型回归中的置信区间
 date: '2024-10-15'
 summary: Confidence Interval in linear model regression 
+math: true
 ---
 
 在了解置信区间之前，先来区分两个不同的概念。

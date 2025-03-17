@@ -58,7 +58,5 @@ features:
     provider: 'mapnik'
     api_key: ''
     zoom: 15
-  math:
-    enable: true
   privacy_pack:
     enable: false

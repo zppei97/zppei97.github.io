@@ -7,80 +7,117 @@ authors:
   - admin
 ---
 
-[Hugo Blox Builder](https://hugoblox.com) is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.
+在了解置信区间之前，先来区分两个不同的概念。
 
-**Embed videos, podcasts, code, LaTeX math, and even test students!**
+## 1. **置信区间**（Confidence Interval）
+置信区间用于估计**回归系数**或**预测值的均值**的范围，反映了模型参数的不确定性。它考虑的是**模型参数**（如回归系数）的不确定性，但不包括未来观测值的随机性。
 
-On this page, you'll find some examples of the types of technical content that can be rendered with Hugo Blox.
 
-## Video
+## 2. **预测区间**（Prediction Interval）
+预测区间用于估计**新的单个观测值**的范围，它不仅考虑了模型参数的不确定性，还考虑了新的观测值中的随机性（即数据中的固有噪声）。因此，预测区间通常比置信区间宽。
 
-Teach your course by sharing videos with your students. Choose from one of the following approaches:
+## 3. **线性回归模型回顾**
 
-**Youtube**:
+考虑一个线性回归模型：
 
-    {{</* youtube D2vj0WcvH5c */>}}
-
-{{< youtube D2vj0WcvH5c >}}
-
-**Bilibili**:
-
-    {{</* bilibili BV1WV4y1r7DF */>}}
-
-{{< bilibili BV1WV4y1r7DF >}}
-
-**Video file**
-
-Videos may be added to a page by either placing them in your `assets/media/` media library or in your [page's folder](https://gohugo.io/content-management/page-bundles/), and then embedding them with the _video_ shortcode:
-
-    {{</* video src="my_video.mp4" controls="yes" */>}}
-
-## Podcast
-
-You can add a podcast or music to a page by placing the MP3 file in the page's folder or the media library folder and then embedding the audio on your page with the _audio_ shortcode:
-
-    {{</* audio src="ambient-piano.mp3" */>}}
-
-Try it out:
-
-{{< audio src="ambient-piano.mp3" >}}
-
-## Test students
-
-Provide a simple yet fun self-assessment by revealing the solutions to challenges with the `spoiler` shortcode:
-
-```markdown
-{{</* spoiler text="👉 Click to view the solution" */>}}
-You found me!
-{{</* /spoiler */>}}
-```
-
-renders as
-
-{{< spoiler text="👉 Click to view the solution" >}} You found me 🎉 {{< /spoiler >}}
-
-## Math
-
-Hugo Blox Builder supports a Markdown extension for $\LaTeX$ math. Enable math by setting the `math: true` option in your page's front matter, or enable math for your entire site by toggling math in your `config/_default/params.yaml` file:
-
-```yaml
-features:
-  math:
-    enable: true
-```
-
-To render _inline_ or _block_ math, wrap your LaTeX math with `$...$` or `$$...$$`, respectively.
-
-Example **math block**:
-
-```latex
 $$
-\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}
+Y = X\beta + \epsilon
 $$
-```
 
-renders as
+其中：
+- $ Y $ 是 $ n \times 1 $ 的响应变量向量。
+- $ X $ 是 $ n \times (p+1) $ 的设计矩阵（包含截距项）。
+- $ \beta$ 是 $ (p+1) \times 1 $ 的回归系数向量。
+- $ \epsilon $ 是 $ n \times 1 $ 的误差向量，假设 $ \epsilon \sim \mathcal{N}(0, \sigma^2 I) $。
 
-$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+通过最小二乘法（OLS），回归系数的估计值为：
 
-Example **inline math** `$\nabla F(\mathbf{x}_{n})$` renders as $\nabla F(\mathbf{x}_{n})$.
+$$
+\hat{\beta} = (X^T X)^{-1} X^T Y
+$$
+
+## 4. **预测均值的定义**
+
+对于一个新的自变量向量 $ x_0 $（包括截距项，即长度为 $ p+1 $），预测均值 $ \hat{y}_0 $ 定义为：
+
+$$
+\hat{y}_0 = x_0^T \hat{\beta}
+$$
+
+## 5. **预测均值的标准误差推导**
+
+预测均值的标准误差 $ SE(\hat{y}_0) $ 反映了估计的预测均值的不确定性。其推导过程如下：
+
+### a. **预测均值的方差**
+
+首先，计算预测均值的方差 $ \text{Var}(\hat{y}_0) $。
+
+$$
+\hat{y}_0 = x_0^T \hat{\beta} = x_0^T (X^T X)^{-1} X^T Y
+$$
+
+由于 $ Y = X\beta + \epsilon $，代入得到：
+
+$$
+\hat{y}_0 = x_0^T (X^T X)^{-1} X^T (X\beta + \epsilon) = x_0^T \beta + x_0^T (X^T X)^{-1} X^T \epsilon
+$$
+
+因为 $ x_0^T \beta $ 是常数，其方差为 0。因此：
+
+$$
+\text{Var}(\hat{y}_0) = \text{Var}\left( x_0^T (X^T X)^{-1} X^T \epsilon \right)
+$$
+
+利用方差的线性性质：
+
+$$
+\text{Var}(\hat{y}_0) = x_0^T (X^T X)^{-1} X^T \text{Var}(\epsilon) X (X^T X)^{-1} x_0
+$$
+
+由于 $ \text{Var}(\epsilon) = \sigma^2 I $（假设误差项独立同分布）：
+
+$$
+\text{Var}(\hat{y}_0) = \sigma^2 x_0^T (X^T X)^{-1} X^T X (X^T X)^{-1} x_0 = \sigma^2 x_0^T (X^T X)^{-1} x_0
+$$
+
+### b. **估计方差 $ \sigma^2 $ 的替代**
+
+在实际应用中，我们通常无法知道真实的 $ \sigma^2 $，因此使用残差平方和的估计值 $ \hat{\sigma}^2 $ 来替代：
+
+$$
+\hat{\sigma}^2 = \frac{RSS}{n - p - 1} = \frac{(Y - X\hat{\beta})^T (Y - X\hat{\beta})}{n - p - 1}
+$$
+
+其中，$ RSS $ 是残差平方和，$ n $ 是样本量，$ p $ 是自变量的数量（不包括截距项）。
+
+### c. **预测均值的标准误差**
+
+将 $ \sigma^2 $ 用 $ \hat{\sigma}^2 $ 代替，并取方根，得到预测均值的标准误差：
+
+$$
+SE(\hat{y}_0) = \hat{\sigma} \sqrt{ x_0^T (X^T X)^{-1} x_0 }
+$$
+
+### d. **完整推导总结**
+
+通过上述步骤，我们得到了预测均值的标准误差的推导过程：
+
+$$
+SE(\hat{y}_0) = \hat{\sigma} \sqrt{ x_0^T (X^T X)^{-1} x_0 }
+$$
+
+## 6. **进一步解释**
+
+- **$ x_0^T (X^T X)^{-1} x_0 $**：这是新输入 $ x_0 $ 在设计矩阵 $ X $ 上的加权平方和，反映了 $ x_0 $ 在自变量空间中的位置。这个项越大，表示 $ x_0 $ 位于自变量的边缘或离群点，预测的不确定性越大。
+  
+- **$ \hat{\sigma} $**：这是残差的标准误差，反映了模型对数据的拟合程度。残差越小，表示模型拟合越好，预测的不确定性越小。
+
+## 7. **总结**
+
+预测均值的标准误差的推导基于以下几个关键步骤：
+
+1. **线性回归模型的假设**：假设误差项服从正态分布且独立同分布。
+2. **最小二乘估计**：使用 OLS 估计回归系数。
+3. **预测均值的表达式**：将新输入 $ x_0 $ 代入回归模型得到预测均值 $ \hat{y}_0 $。
+4. **方差的计算**：利用回归系数的估计性质，计算预测均值的方差。
+5. **标准误差的估计**：使用残差的估计标准差 $ \hat{\sigma} $ 来近似真实标准误差。

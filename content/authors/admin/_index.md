@@ -20,12 +20,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Ph.D. Candidate at [LIESMARS](https://liesmars.whu.edu.cn/index.htm)
+role: Postdoc
 
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: Wuhan University
-    url: https://www.whu.edu.cn/
+    url: https://jszy.whu.edu.cn/peizhipeng/zh_CN/index.htm
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -62,9 +62,9 @@ education:
   - area: Ph.D. in Remote Sensing
     institution: Wuhan University
     date_start: 2019-09-01
-    date_end: 2025-06-01
+    date_end: 2025-12-01
     summary: |
-      Supervised by [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). PhD thesis topic is on "Remote Sensing Detection and Quantification Methods for Point-Source Carbon Emissions"
+      Supervised by [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). PhD thesis topic is on "Remote Sensing Detection and Quantification Methods for Point-Source Methane Emissions"
   - area: B.E. in Computer Science
     institution: Wuhan University
     date_start: 2015-09-01
@@ -156,7 +156,7 @@ languages:
 
 👋🏼 Hi, there! I am Zhipeng (Pacey) Pei.
 
-I grew up in Jiaozuo, Henan, China, before embarking on my journey at Wuhan University, where I completed my bachelor's degree in computer science (June 2019). I’m a third year Ph.D. student at Wuhan University under the supervisions of Profs. [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). Currently I am visiting student under the supervision of [Luis Guanter](http://luiguapa.webs.upv.es/) at Universitat Politècnica de València.
+I grew up in Jiaozuo, Henan, China, before embarking on my academic journey at Wuhan University, where I received my bachelor's degree in June 2019 and my Ph.D. in Photogrammetry and Remote Sensing in December 2025, under the supervision of Profs. [Wei Gong](https://www.whu.edu.cn/info/1545/164954.htm) and [Ge Han](http://jszy.whu.edu.cn/hange/zh_CN/index.htm). During my Ph.D., I was a visiting student at Universitat Politècnica de València, working with Prof. [Luis Guanter](http://luiguapa.webs.upv.es/).
 
-I am passionate about helping us better understand the Earth's GHG (especially for carbon dioxide and methane) concentrations and emissions using satellite remote sensing, including IPDA lidar system (active RS) and imaging spectroscopy (passive RS). My goal is to realize independent evaluation of bottom-up inventories via atmospheric transport modeling and space-based observations.
+I am currently a postdoctoral researcher at Wuhan University. My research focuses on imaging spectroscopy and atmospheric remote sensing, particularly the detection and quantification of greenhouse gas and air pollutant emissions from individual facilities.
 
